@@ -1,0 +1,23 @@
+<!doctype html>
+<html>
+<head>
+    <title>Login and Registration</title>
+    <link rel="stylesheet" type="text/css" href="../static/styles.css">
+</head>
+<body>
+
+     <p> You are logged in as {{user['first_name']}} {{user['last_name']}}</p>
+          <ul>
+               <li>{{user['email']}}</li>
+               <li>{{user['created_at']}}</li>
+          </ul>
+
+     <div id="regForm">
+
+          <form action ="/logout/{{user['id']}}" method='post'>
+          <input class="button" type="submit" value="Log Out"></p>
+          </form>
+     </div>
+
+</body>
+</html>
